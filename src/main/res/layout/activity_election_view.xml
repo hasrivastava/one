@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ElectionView">
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/purple_500"
+        android:text="Logout"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner_indian_states"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/states"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView_indian_states"
+        app:layout_constraintStart_toStartOf="@+id/textView_indian_states"
+        app:layout_constraintTop_toBottomOf="@+id/textView_indian_states" />
+
+    <Spinner
+        android:id="@+id/spinner_indian_districts"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView_indian_districts"
+        app:layout_constraintStart_toStartOf="@+id/textView_indian_districts"
+        app:layout_constraintTop_toBottomOf="@+id/textView_indian_districts"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:background="@color/purple_500"
+        android:text="Next"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_indian_districts"
+        app:layout_constraintStart_toStartOf="@+id/spinner_indian_districts"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_indian_districts" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/select"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/textview_election_type"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textview_election_type"
+        app:layout_constraintTop_toBottomOf="@+id/textview_election_type"
+        tools:ignore="SpeakableTextPresentCheck,DuplicateClickableBoundsCheck" />
+
+    <TextView
+        android:id="@+id/textview_election_type"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:text="@string/select"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_indian_states"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/states"
+        app:layout_constraintEnd_toEndOf="@+id/spinner"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/spinner"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+    <TextView
+        android:id="@+id/textView_indian_districts"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/district"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_indian_states"
+        app:layout_constraintStart_toStartOf="@+id/spinner_indian_states"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_indian_states" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
